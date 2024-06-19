@@ -4,6 +4,8 @@ This is a React version of the [vanilla JS Expense Tracker](https://github.com/b
 
 ## Usage
 ```
+The version of node in the pproject is v16.20.2
+# code this into terminal
 npm install
 
 # Run on http://localhost:3000
