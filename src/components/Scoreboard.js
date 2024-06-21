@@ -1,12 +1,12 @@
 import React, { useContext } from 'react';
 import { GlobalContext } from '../context/GlobalState';
 
-export const IncomeExpenses = () => {
-  const { transactions } = useContext(GlobalContext);
+export const Scoreboard = () => {
+  const { scores } = useContext(GlobalContext);
 
-  const amounts = transactions.map(transaction => ({
-    team: transaction.team,
-    amount: transaction.amount
+  const amounts = scores.map(score => ({
+    team: score.team,
+    amount: score.amount
   }));
 
   const income = amounts

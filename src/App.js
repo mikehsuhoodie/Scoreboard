@@ -1,8 +1,8 @@
 import React from 'react';
 import { Header } from './components/Header';
-import { IncomeExpenses } from './components/IncomeExpenses';
-import { TransactionList } from './components/TransactionList';
-import { AddTransaction } from './components/AddTransaction';
+import { Scoreboard } from './components/Scoreboard';
+import { ScoreList } from './components/ScoreList';
+import { AddScore } from './components/AddScore';
 
 import { GlobalProvider } from './context/GlobalState';
 
@@ -13,9 +13,9 @@ function App() {
     <GlobalProvider>
       <Header />
       <div className="container">
-        <IncomeExpenses />
-        <TransactionList />
-        <AddTransaction />
+        <Scoreboard />
+        <ScoreList />
+        <AddScore />
       </div>
     </GlobalProvider>
   );

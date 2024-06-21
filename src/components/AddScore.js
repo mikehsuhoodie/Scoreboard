@@ -1,24 +1,24 @@
 import React, {useState, useContext} from 'react'
 import { GlobalContext } from '../context/GlobalState';
 
-export const AddTransaction = () => {
+export const AddScore = () => {
   const [text, setText] = useState('');
   const [amount, setAmount] = useState(0);
   const [team, setTeam] = useState('Green');
 
-  const { addTransaction } = useContext(GlobalContext);
+  const { addScore } = useContext(GlobalContext);
 
   const onSubmit = e => {
     e.preventDefault();
 
-    const newTransaction = {
+    const newScore = {
       id: Math.floor(Math.random() * 100000000), // This is just a temporary solution to generate a random id
       text,
       amount: +amount,
       team
     }
 
-    addTransaction(newTransaction);
+    addScore(newScore);
   }
 
   return (
