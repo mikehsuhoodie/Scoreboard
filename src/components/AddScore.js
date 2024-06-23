@@ -10,7 +10,10 @@ export const AddScore = () => {
 
   const onSubmit = e => {
     e.preventDefault();
-
+    if(amount <= 0 || text === '') {
+      alert('Please enter a valid score and player name');
+      return;
+    }
     const newScore = {
       id: Math.floor(Math.random() * 100000000), // This is just a temporary solution to generate a random id
       text,
@@ -33,7 +36,7 @@ export const AddScore = () => {
           <label htmlFor="amount">
             Score
           </label>
-          <input type="number" value={amount} onChange={(e) => setAmount(Math.abs(e.target.value))} placeholder="Enter amount..." />
+          <input type="number" value={amount} onChange={(e) => setAmount(e.target.value)} placeholder="Enter amount..." />
         </div>
         <button className="Gbtn" onClick={() => setTeam('Green')}>Green Team</button>
         <button className="Rbtn" onClick={() => setTeam('Red')}>Red Team</button>
